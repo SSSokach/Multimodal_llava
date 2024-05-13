@@ -1,0 +1,55 @@
+CONTROLLER_HEART_BEAT_EXPIRATION = 30
+WORKER_HEART_BEAT_INTERVAL = 15
+
+LOGDIR = "."
+
+# Model Constants
+IGNORE_INDEX = -100
+
+IMAGE_TOKEN_INDEX = -200
+DEFAULT_IMAGE_TOKEN = "<image>"
+DEFAULT_IMAGE_PATCH_TOKEN = "<image_patch>"
+DEFAULT_IM_START_TOKEN = "<image_start>"
+DEFAULT_IM_END_TOKEN = "<image_end>"
+DEFAULT_IMAGE_START_TOKEN = "<image_start>"
+DEFAULT_IMAGE_END_TOKEN = "<image_end>"
+IMAGE_PLACEHOLDER = "<image-placeholder>"
+
+DEFAULT_VIDEO_TOKEN = "<video>"
+DEFAULT_VIDEO_PATCH_TOKEN = "<video_patch>"
+DEFAULT_VIDEO_START_TOKEN = "<video_start>"
+DEFAULT_VIDEO_END_TOKEN = "<video_end>"
+VIDEO_PLACEHOLDER = "<video-placeholder>"
+
+DEFAULT_AUDIO_TOKEN = "<audio>"
+DEFAULT_AUDIO_PATCH_TOKEN = "<audio_patch>"
+DEFAULT_AUDIO_START_TOKEN = "<audio_start>"
+DEFAULT_AUDIO_END_TOKEN = "<audio_end>"
+AUDIO_PLACEHOLDER = "<audio-placeholder>"
+
+DEFAULT_DEPTH_TOKEN = "<depth>"
+DEFAULT_DEPTH_PATCH_TOKEN = "<depth_patch>"
+DEFAULT_DEPTH_START_TOKEN = "<depth_start>"
+DEFAULT_DEPTH_END_TOKEN = "<depth_end>"
+DEPTH_PLACEHOLDER = "<depth-placeholder>"
+
+DEFAULT_THERMAL_TOKEN = "<thermal>"
+DEFAULT_THERMAL_PATCH_TOKEN = "<thermal_patch>"
+DEFAULT_THERMAL_START_TOKEN = "<thermal_start>"
+DEFAULT_THERMAL_END_TOKEN = "<thermal_end>"
+THERMAL_PLACEHOLDER = "<thermal-placeholder>"
+
+DEFAULT_ELECTROMAGNETIC_WAVE_TOKEN = "<electromagnetic_wave>"
+DEFAULT_ELECTROMAGNETIC_WAVE_PATCH_TOKEN = "<electromagnetic_wave_patch>"
+DEFAULT_ELECTROMAGNETIC_WAVE_START_TOKEN = "<electromagnetic_wave_start>"
+DEFAULT_ELECTROMAGNETIC_WAVE_END_TOKEN = "<electromagnetic_wave_end>"
+ELECTROMAGNETIC_WAVE_PLACEHOLDER = "<electromagnetic_wave-placeholder>"
+
+MAX_IMAGE_LENGTH = 8
+MAX_VIDEO_LENGTH = 1  # current video datasets only have 1 video?
+MAX_AUDIO_LENGTH = 1 
+MAX_DEPTH_LENGTH = 1 
+MAX_THERMAL_LENGTH = 1 
+MAX_ELECTROMAGNETIC_WAVE_LENGTH = 1 
+
+PAD_LENGTH = 620

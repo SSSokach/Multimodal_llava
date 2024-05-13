@@ -1,0 +1,16 @@
+[
+    {
+        "multimodal_mode": "audio",
+        "audio": "data_file/audio.wav",
+        "conversations": [
+          {
+            "from": "human",
+            "value": "<audio>\n听下面一段语音，回答问题：讲话人的情感是什么?选项：中立\t平静\t快乐\t悲伤\t愤怒\t恐惧\t厌恶\t惊讶"
+          },
+          {
+            "from": "gpt",
+            "value": "中立"
+          }
+        ]
+    }
+]

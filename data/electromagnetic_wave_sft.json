@@ -1,0 +1,16 @@
+[
+    {
+        "multimodal_mode": "electromagnetic_wave",
+        "electromagnetic_wave": "data_file/electromagnetic_wave.json",
+        "conversations": [
+          {
+            "from": "human",
+            "value": "<electromagnetic_wave>\n请问这段波长范围在[400-2500]的电磁波数据代表什么含义？"
+          },
+          {
+            "from": "gpt",
+            "value": "根据你的描述，波长范围在[400-2500]的电磁波数据通常是高光谱数据，这段电磁波表示的是西兰花"
+          }
+        ]
+    }
+]

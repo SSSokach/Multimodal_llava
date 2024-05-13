@@ -1,0 +1,16 @@
+[
+    {
+      "multimodal_mode": "image",
+      "image": "data_file/image.jpg",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<image>\n请详细描述给定的图片。"
+        },
+        {
+          "from": "gpt",
+          "value": "这张照片捕捉到一名滑板运动员在表演特技时跳上金属栏杆的动作。现场还有其他人。几辆车包围了滑板手练习技巧的区域。可以看到五辆车停在他身后。可以看到第二个滑板被右侧的人骑着。"
+        }
+      ]
+    }
+]

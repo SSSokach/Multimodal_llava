@@ -1,0 +1,11 @@
+{
+    "sft_data":[
+        "path/to/text_sft.json",
+        "path/to/image_sft.json",
+        "path/to/video_sft.json",
+        "path/to/audio_sft.json",
+        "path/to/depth_sft.json",
+        "path/to/thermal_sft.json",
+        "path/to/electromagnetic_wave_sft.json"
+    ]
+}
