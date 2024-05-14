@@ -1,22 +1,22 @@
-<h2 align="center"> <a href="https://arxiv.org/abs/2311.10122">Multimodel-LLaVA: Align text with other seven modals base on Languagebind and videollava</a></h2>
-<h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for latest update.  </h2>
-<h5 align="center"> <a href="./README_zh.md">中文说明</a></h2>
+<h2 align="center"> <a href="https://arxiv.org/abs/2311.10122">Multimodel-LLaVA: 基于Video-LLaVA与LanguageBind对齐文本与七个模态</a></h2>
+<h5 align="center"> 如果你喜欢我们的项目，请给我们一个⭐</h2>
+<h5 align="center"> <a href="./README_en.md">English Readme</a></h2>
 
 
-## 😮 Highlights
+## 😮 亮点
 
-We have expanded the capabilities of videollava to eight modalities
-- text
-- images
-- video
-- audio
-- depth
-- thermal
-- underwater acoustic
-- electromagnetic waves.
+我们将videollava的能力扩展到八种模式
+- 文本
+- 图片
+- 视频
+- 音频
+- 深度
+- 热
+- 水声
+- 电磁波
 
 
-## 🛠️ Requirements and Installation
+## 🛠️ 环境配置
 * Python >= 3.10
 * Pytorch >= 2.0.1
 * CUDA Version >= 11.7
@@ -46,39 +46,31 @@ pip install flash-attn --no-build-isolation
 # conda install -c conda-forge sox
 ```
 
-## 🗝️ Data &Training & CLI Inference
+## 🗝️ 数据 & 训练 & 推理
 
-### data
+### 数据
 
 
-Prepare your sft data. There are some examples in `./data`.
+请准备自己的指令微调数据。目录`./data`里提供了一些参考样例。
 
-Here is an image sft data example:
+下面是一个图片模态指令数据的样例:
 
 ```json
 [
     {
-        "multimodal_mode": "image"
-        "image": "example.jpg",
+        "multimodal_mode": "image",
+        "image": "data_file/image.jpg",
         "conversations": [
             {
                 "from": "human",
-                "value": "<image>\nProvide a one-sentence caption for the provided image.\nReference OCR token: LESS, IN, LESS, IN, SE, TENSE, ZERO, ALHC, ZERO, ALDL, LESS, INTENSE, $S, INTENSE, COHOL, RO, ALCOHOL, ZERO, ALCOHOL, LISTER, ERINE, ZER, LISTER, ZER, LISTERINE, ZERO, STERINE, ERO, MOUTHW, ProventoKill, MOUTHW, ZERO, MOUTH, Millions, Proven, illMillions, Contact, Germs, MOUTHWAS, ermstha, Cause, Breathon, Proven, Kill, Millions, Germs, CLEANMINT, Breath, Contact, CLEANMINT"
+                "value": "<image>\n请详细描述给定的图片。"
             },
             {
                 "from": "gpt",
-                "value": "Five Listerine Zero mouthwash bottles on a store shelf."
-            },
-            {
-                "from": "human",
-                "value": "Thanks."
-            },
-            {
-                "from": "gpt",
-                "value": "You're welcome."
+                "value": "这张照片捕捉到一名滑板运动员在表演特技时跳上金属栏杆的动作。现场还有其他人。几辆车包围了滑板手练习技巧的区域。可以看到五辆车停在他身后。可以看到第二个滑板被右侧的人骑着。"
             }
         ]
-    },
+    }
     {
         ...
     },
@@ -88,10 +80,11 @@ Here is an image sft data example:
 ]
 ```
 
-`multimodal_mode`  can be `image，video，audio，depth，thermal，none`, which `none` mean "only text"
+- `multimodal_mode`  可以填 `image，video，audio，depth，thermal，none`,  `none` 代表该条数据是文本数据。
+- `image` 填指令对应的图片文件地址。
+- `conversations` 支持单轮对话与多轮对话。
 
-
-### Training
+### 训练
 
 ```bash
 # prepare model weight
@@ -101,7 +94,7 @@ python -m videollava.split_model_utils
 bash scripts/v1_5/finetune_continue_sft.sh
 ```
 
-### CLI Inference 
+### 推理
 
 ```bash
 bash scripts/v1_5/cli_auto_inferrence.sh
@@ -109,9 +102,9 @@ bash scripts/v1_5/cli_auto_inferrence.sh
 
 
 
-## 👍 Acknowledgement
+## 👍 致谢
 
-* [LLaVA](https://github.com/haotian-liu/LLaVA) and [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA)The codebase we built upon and it is an efficient large language and vision assistant.
+* 我们基于[LLaVA](https://github.com/haotian-liu/LLaVA) 与 [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA) 这两个代码库实现的，这是一系列优秀的多模态大语言模型。
 
-## 🔒 License
-* The majority of this project is released under the Apache 2.0 license as found in the [LICENSE](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/LICENSE) file.
+## 🔒 许可
+- 这个项目的大部分是在[license](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/LICENSE)文件中找到的Apache 2.0许可证下发布的。
