@@ -50,9 +50,10 @@ pip install flash-attn --no-build-isolation
 
 ### data
 
-Prepare your sft data. Here is an example:
 
-`multimodal_mode`  can be `image，video，audio，depth，thermal，none`, which `none` mean "only text"
+Prepare your sft data. There are some examples in `./data`.
+
+Here is an image sft data example:
 
 ```json
 [
@@ -87,7 +88,8 @@ Prepare your sft data. Here is an example:
 ]
 ```
 
-There are other examples in `./data`
+`multimodal_mode`  can be `image，video，audio，depth，thermal，none`, which `none` mean "only text"
+
 
 ### Training
 

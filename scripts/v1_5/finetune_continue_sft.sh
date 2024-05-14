@@ -1,7 +1,6 @@
 port=$(shuf -i25000-30000 -n1)
 
 data_path='your_data_path'
-model_path='your_model_save_path'
 
 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1  deepspeed --include localhost:0,1,2,3,4,5,6,7  --master_port $port videollava/train/train_mem.py \
     --deepspeed ./scripts/zero2_offload.json \
@@ -48,3 +47,5 @@ HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1  deepspeed --include localhost:0,1,
     --lazy_preprocess True \
     --report_to tensorboard \
     --cache_dir "./cache_dir"
+
+
