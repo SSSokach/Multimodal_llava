@@ -1,6 +1,6 @@
 <h2 align="center"> <a href="https://arxiv.org/abs/2311.10122">Multimodel-LLaVA: Align text with other seven modals base on Languagebind and videollava</a></h2>
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for latest update.  </h2>
-
+<h5 align="center"> <a href="./README_zh.md">中文说明</a></h2>
 
 
 ## 😮 Highlights
@@ -115,4 +115,3 @@ bash scripts/v1_5/cli_auto_inferrence.sh
 
 ## 🔒 License
 * The majority of this project is released under the Apache 2.0 license as found in the [LICENSE](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/LICENSE) file.
-* The service is a research preview intended for non-commercial use only. Please contact us if you find any potential violation.
