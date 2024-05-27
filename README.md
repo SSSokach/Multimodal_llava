@@ -97,7 +97,7 @@ bash scripts/v1_5/finetune_continue_sft.sh
 ### 推理
 
 ```bash
-bash scripts/v1_5/cli_auto_inferrence.sh
+bash scripts/v1_5/cli_chat.sh
 ```
 
 
